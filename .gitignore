@@ -13,7 +13,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pkl
 *.sqlite3
 
 # Build / packaging
