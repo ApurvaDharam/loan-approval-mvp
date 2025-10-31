@@ -1,0 +1,64 @@
+# -----------------------------
+# Python / FastAPI / Streamlit
+# -----------------------------
+
+# Virtual environments
+venv/
+.env/
+.env.bak
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+
+# Build / packaging
+*.egg-info/
+dist/
+build/
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+colab/.ipynb_checkpoints/
+
+# Logs / reports
+*.log
+*.out
+*.err
+logs/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Test artifacts
+.coverage
+htmlcov/
+pytest_cache/
+.tox/
+
+# Streamlit specific
+.streamlit/
+frontend/__pycache__/
+backend/__pycache__/
+
+# Model artifacts
+*.joblib
+*.h5
+*.model
+*.sav
+*.pkl
+*.json
+
+# Node / frontend (if using npm for Streamlit deployment)
+node_modules/
