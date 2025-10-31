@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from typing import Optional
 from pydantic import BaseModel
 import joblib, os, pandas as pd
 
@@ -7,17 +8,17 @@ app = FastAPI(title="Loan Approval Predictor - Backend")
 MODEL_PATH = os.environ.get("MODEL_PATH", "model/loan_model.pkl")
 
 class LoanApplication(BaseModel):
-    Gender: str | None = None
-    Married: str | None = None
-    Dependents: str | None = None
-    Education: str | None = None
-    Self_Employed: str | None = None
-    ApplicantIncome: float | None = None
-    CoapplicantIncome: float | None = None
-    LoanAmount: float | None = None
-    Loan_Amount_Term: float | None = None
-    Credit_History: float | None = None
-    Property_Area: str | None = None
+    Gender: Optional[str] = None
+    Married: Optional[str] = None
+    Dependents: Optional[str] = None
+    Education: Optional[str] = None
+    Self_Employed: Optional[str] = None
+    ApplicantIncome: Optional[float] = None
+    CoapplicantIncome: Optional[float] = None
+    LoanAmount: Optional[float] = None
+    Loan_Amount_Term: Optional[float] = None
+    Credit_History: Optional[float] = None
+    Property_Area: Optional[str] = None
 
 model = None
 
