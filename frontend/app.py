@@ -30,7 +30,8 @@ if submit:
         'Property_Area': property_area
     }
 
-    backend_url = 'http://localhost:8000/predict'
+    # backend_url = 'http://localhost:8000/predict'
+    backend_url = "https://loan-approval-backend-latest.onrender.com/predict"
     try:
         r = requests.post(backend_url, json=payload, timeout=5)
         if r.status_code == 200:
