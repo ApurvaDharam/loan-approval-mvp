@@ -56,7 +56,6 @@ backend/__pycache__/
 *.h5
 *.model
 *.sav
-*.pkl
 *.json
 
 # Node / frontend (if using npm for Streamlit deployment)
