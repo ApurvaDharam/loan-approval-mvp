@@ -2,7 +2,7 @@
 
 **Structure** (separate folders for backend and frontend):
 ```
-loan-approval-mvp-separate/
+loan-approval/
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
@@ -14,7 +14,7 @@ loan-approval-mvp-separate/
 │   ├── requirements.txt
 │   └── Dockerfile
 ├── colab/loan_model_training.ipynb
-├── .github/workflows/ci.yml
+├── .github/workflows/ci-cd.yml
 └── README.md
 ```
 
@@ -32,9 +32,13 @@ loan-approval-mvp-separate/
    ```
 4. Use the Streamlit UI to call the backend at http://localhost:8000/predict
 
-## DevOps (how this demonstrates value)
+## Deployed on Render
+1. Frontend: https://loan-approval-frontend-latest.onrender.com/
+2. Backend: https://loan-approval-backend-latest.onrender.com/predict
+
+## DevOps 
 - **CI (GitHub Actions)**: runs tests and lints, builds Docker images. Automates checks so changes don't break the system.
 - **Containerization (Docker)**: packages backend & frontend for consistent deployment across environments.
-- **CD (Render / Railway / Streamlit Cloud)**: push-to-deploy services that automatically update on new commits (connect GitHub repo).
-- **Model Versioning**: trained model `loan_model.pkl` is stored in backend (or pushed to model registry). The CI pipeline can validate model metrics before deployment to prevent regressions.
+- **CD (Render)**: push-to-deploy services that automatically update on new commits (connect GitHub repo).
+- **Model Versioning**: trained model `loan_model.pkl` is stored in backend. The CI pipeline validates model metrics before deployment to prevent regressions.
 - **Benefits**: reduces manual approval delays, avoids human copy/paste errors, and provides repeatable, auditable deployments.
