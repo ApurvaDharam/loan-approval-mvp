@@ -4,7 +4,7 @@ import json
 
 st.set_page_config(page_title='Loan Approval Demo', layout='centered')
 
-st.title('Loan Approval Predictor ')
+st.title('Loan Approval Prediction System')
 st.write('Fill the form and click **Predict**. This app calls the FastAPI backend at /predict.')
 
 with st.form('loan_form'):
